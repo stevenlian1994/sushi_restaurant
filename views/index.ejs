@@ -77,11 +77,15 @@
             height:100%;
             /* background-color: ; */
             left:-200px;
-
             bottom:-20px;
-            transition:all 500ms linear;
         }
-        #sidebar.active{
+        #bottom-sidebar{
+            transition:all 500ms linear;
+            top:100px;
+            left:-200px;
+            position:fixed;
+        }
+        #bottom-sidebar.active{
             left:0px;
         }
         #sidebar ul li{
@@ -94,6 +98,9 @@
             position:absolute;
             left:230px;
             top:20px;
+        }
+        .nav-link {
+            color:white;
         }
         #sidebar .toggle-btn span{
             display:block;
@@ -110,29 +117,31 @@
     </style>
     <script>
         function toggleSidebar(){
-        document.getElementById("sidebar").classList.toggle('active');
+        document.getElementById("bottom-sidebar").classList.toggle('active');
         }
     </script>
 </head>
 <body>
-        <div id="sidebar">
-                <div class="toggle-btn" onclick="toggleSidebar()">
-              <span></span>
-              <span></span>
-              <span></span> 
-              </div>
-              <ul class="nav flex-column">
-                    <li class="nav-item ">
-                       <a class="nav-link text-dark" href="#"> Home</a>
-                   </li>
-                   <li class="nav-item text-dark">
-                       <a class="nav-link text-dark" href="#"> About us</a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link text-dark" href="#"> Menu</a>
-                   </li>
-               </ul>
-              </div>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span> 
+        </div>
+        <div id="bottom-sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link"  href="#"> Home</a>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="#"> About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Menu</a>
+                </li>
+            </ul>
+        </div>
+    </div>
               <div class="container-title">
                     <h1 class='logo'>restaurant name</h1>
                     <i class="fab fa-facebook-f"></i>
