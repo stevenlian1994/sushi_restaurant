@@ -9,6 +9,6 @@ app.get('/', function(request, response){
     response.render('index')
 })
 
-app.listen(8000, function(){
-    console.log("listening on port 8000")
+app.listen(7000, function(){
+    console.log("listening on port 7000")
 })
